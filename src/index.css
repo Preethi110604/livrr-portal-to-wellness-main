@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 355 100% 100%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+    --accent: 24 70% 91%;
+    --accent-foreground: 24 10% 10%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 142 76% 36%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+    cursor: none !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  ::selection {
+    @apply bg-livrr-green/20 text-livrr-green-dark;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/90 backdrop-blur-md border border-white/40 shadow-glass;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/30 shadow-glass-sm transition-all duration-300 hover:shadow-glass hover:bg-white/90;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+  }
+  
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-livrr-green-dark mb-6 max-w-3xl mx-auto;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-livrr-gray-dark mb-10 max-w-3xl mx-auto;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-md;
+  }
+  
+  .button-primary {
+    @apply relative overflow-hidden bg-livrr-green text-white rounded-full px-6 py-3 text-base font-medium transition-all duration-300 hover:bg-livrr-green-dark hover:shadow-md active:scale-95;
+  }
+  
+  .button-secondary {
+    @apply relative overflow-hidden bg-white text-livrr-green-dark border border-livrr-green rounded-full px-6 py-3 text-base font-medium transition-all duration-300 hover:bg-livrr-green/10 hover:shadow-sm active:scale-95;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-livrr-green/50 focus:border-transparent transition-all duration-300;
+  }
+
+  /* Magnetic buttons animation */
+  .magnetic-button {
+    @apply relative transition-transform duration-300 ease-out;
+  }
+}
+
+/* Cursor interactions */
+a, button, [role="button"], input, select, textarea, [tabindex="0"] {
+  @apply cursor-none transition-transform duration-300 hover:scale-105;
+}
+
+/* Scroll animations */
+.reveal {
+  @apply opacity-0 transition-all duration-700 ease-out;
+  transform: translateY(20px);
+}
+
+.reveal.active {
+  @apply opacity-100;
+  transform: translateY(0);
+}
+
+/* Longevity glow elements */
+.longevity-glow {
+  @apply absolute -z-10 bg-gradient-radial from-livrr-green/20 to-transparent rounded-full;
+  filter: blur(20px);
+  animation: pulse-slow 6s infinite alternate;
+}
+
+/* Additional animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Smooth page transitions */
+.page-transition-enter {
+  opacity: 0;
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-livrr-green/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-livrr-green;
+}

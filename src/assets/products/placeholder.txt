@@ -1,0 +1,2 @@
+
+This directory will hold local images for the Products page
