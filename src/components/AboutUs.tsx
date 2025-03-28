@@ -77,63 +77,7 @@ const AboutUs: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Meet the Team */}
-          <motion.div
-            className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-          >
-            <h2 className="text-2xl font-semibold text-green-800 mb-6">Meet the Team</h2>
-            <p className="text-lg text-gray-700 mb-10">
-              Our dedicated team of health experts, fitness coaches, and tech enthusiasts is here to help you achieve your
-              wellness goals.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              {/* Team Member 1 */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-green-100 p-4 rounded-xl shadow-xl"
-              >
-                <img
-                  src="/images/team1.jpg"
-                  alt="Team Member 1"
-                  className="rounded-lg mb-4"
-                />
-                <h3 className="font-semibold text-green-800">Ava Williams</h3>
-                <p className="text-sm mt-2">Founder & Wellness Expert</p>
-              </motion.div>
-
-              {/* Team Member 2 */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-green-100 p-4 rounded-xl shadow-xl"
-              >
-                <img
-                  src="/images/team2.jpg"
-                  alt="Team Member 2"
-                  className="rounded-lg mb-4"
-                />
-                <h3 className="font-semibold text-green-800">Liam Johnson</h3>
-                <p className="text-sm mt-2">Tech Lead & AI Specialist</p>
-              </motion.div>
-
-              {/* Team Member 3 */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-green-100 p-4 rounded-xl shadow-xl"
-              >
-                <img
-                  src="/images/team3.jpg"
-                  alt="Team Member 3"
-                  className="rounded-lg mb-4"
-                />
-                <h3 className="font-semibold text-green-800">Sophia Brown</h3>
-                <p className="text-sm mt-2">Fitness Coach & Nutritionist</p>
-              </motion.div>
-            </div>
-          </motion.div>
+         
         </div>
       </main>
       <Footer />
