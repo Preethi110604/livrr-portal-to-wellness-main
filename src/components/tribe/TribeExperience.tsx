@@ -7,54 +7,18 @@ import {
   Users, 
   Heart, 
   Zap, 
-  Leaf
+  Leaf 
 } from 'lucide-react';
 
 const experiences = [
-  {
-    icon: <Award className="h-8 w-8" />,
-    title: "Weekly Progress Tracking",
-    description: "Track your health journey with detailed weekly measurements and milestones.",
-    color: "from-green-400 to-green-600"
-  },
-  {
-    icon: <Compass className="h-8 w-8" />,
-    title: "Cheat Days Allowed",
-    description: "Our balanced approach includes scheduled cheat days to keep your journey sustainable.",
-    color: "from-blue-400 to-blue-600"
-  },
-  {
-    icon: <BookOpen className="h-8 w-8" />,
-    title: "Blue Zone 21 Days Access",
-    description: "Get complete access to our blue zone resources and longevity programs.",
-    color: "from-indigo-400 to-indigo-600"
-  },
-  {
-    icon: <Zap className="h-8 w-8" />,
-    title: "Pure Products Discount",
-    description: "Enjoy special discounts on our curated selection of organic health products.",
-    color: "from-amber-400 to-amber-600"
-  },
-  {
-    icon: <Users className="h-8 w-8" />,
-    title: "Community Meetups",
-    description: "Connect with fellow tribe members through regular gatherings and support sessions.",
-    color: "from-purple-400 to-purple-600"
-  },
-  {
-    icon: <Leaf className="h-8 w-8" />,
-    title: "Naturopathy Doctors Consultation",
-    description: "Get expert guidance from naturopathy doctors to improve your health with natural and holistic treatments.",
-    color: "from-green-400 to-green-600"
-  },
-  
-  {
-    icon: <Heart className="h-8 w-8" />,
-    title: "Structured Diet Plan",
-    description: "Follow our expert-designed 10-day diet plan to kickstart your health transformation.",
-    color: "from-pink-400 to-pink-600",
-    textClass: "text-left" // Ensuring left alignment
-  }   
+  { icon: <Award className="h-8 w-8" />, title: "Weekly Progress Tracking", description: "Track your health journey with detailed weekly measurements and milestones.", color: "from-green-400 to-green-600" },
+  { icon: <Compass className="h-8 w-8" />, title: "Cheat Days Allowed", description: "Our balanced approach includes scheduled cheat days to keep your journey sustainable.", color: "from-blue-400 to-blue-600" },
+  { icon: <BookOpen className="h-8 w-8" />, title: "Blue Zone 21 Days Access", description: "Get complete access to our blue zone resources and longevity programs.", color: "from-indigo-400 to-indigo-600" },
+  { icon: <Zap className="h-8 w-8" />, title: "Pure Products Discount", description: "Enjoy special discounts on our curated selection of organic health products.", color: "from-amber-400 to-amber-600" },
+  { icon: <Users className="h-8 w-8" />, title: "Community Meetups", description: "Connect with fellow tribe members through regular gatherings and support sessions.", color: "from-purple-400 to-purple-600" },
+  { icon: <Leaf className="h-8 w-8" />, title: "Naturopathy Doctors Consultation", description: "Get expert guidance from naturopathy doctors to improve your health with natural and holistic treatments.", color: "from-green-400 to-green-600" },
+  { icon: <Heart className="h-8 w-8" />, title: "Structured Diet Plan", description: "Follow our expert-designed 10-day diet plan to kickstart your health transformation.", color: "from-pink-400 to-pink-600" },
+  { icon: <Zap className="h-8 w-8" />, title: "Digital Detox", description: "Disconnect to reconnect. Enjoy technology-free retreats for mental clarity and relaxation.", color: "from-yellow-400 to-orange-500" }
 ];
 
 const TribeExperience = () => {
@@ -64,6 +28,8 @@ const TribeExperience = () => {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="container relative z-10">
+
+        {/* Title Section */}
         <div 
           ref={titleRef as React.RefObject<HTMLDivElement>}
           className={`text-center mb-16 transition-all duration-700 ${
@@ -82,6 +48,7 @@ const TribeExperience = () => {
           </p>
         </div>
 
+        {/* Cards Section */}
         <div 
           ref={contentRef as React.RefObject<HTMLDivElement>}
           className={`relative transition-all duration-1000 ${
@@ -89,33 +56,40 @@ const TribeExperience = () => {
           }`}
         >
           <div className="absolute inset-0 -z-10 bg-gradient-radial from-livrr-green/5 to-transparent rounded-3xl"></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {/* Grid Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+            {/* Render all experience cards */}
             {experiences.map((experience, index) => (
               <div
                 key={experience.title}
-                className={`bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-livrr-green/20 group ${
-                  experience.title === "Structured Diet Plan" ? "md:col-span-2 lg:col-span-3 mx-auto text-left" : ""
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                className="flex flex-col justify-between bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-livrr-green/20 group"
+                style={{ minHeight: '360px', transitionDelay: `${index * 100}ms` }}
               >
+                {/* Icon */}
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${experience.color} flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform`}>
                   {experience.icon}
                 </div>
-                <h3 className={`text-xl font-semibold text-livrr-green-dark mb-3 ${experience.textClass || ""}`}>
+
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-livrr-green-dark mb-3">
                   {experience.title}
                 </h3>
-                <p className={`text-livrr-gray ${experience.textClass || ""}`}>
+
+                {/* Description */}
+                <p className="text-livrr-gray">
                   {experience.description}
                 </p>
               </div>
             ))}
           </div>
 
+          {/* Button Section */}
           <div className="mt-12 text-center">
             <a 
               href="#join-movement" 
-              className="button-primary inline-flex items-center gap-2 group"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-livrr-green-dark text-white font-medium rounded-lg hover:scale-105 transition-transform"
             >
               Join The Tribe
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

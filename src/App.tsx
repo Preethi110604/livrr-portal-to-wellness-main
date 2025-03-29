@@ -12,6 +12,7 @@ import LivrrAlpha from "./pages/LivrrAlpha";
 import LiverAI from "./pages/LiverAI";
 import BlueZone from "./pages/BlueZone";
 import NotFound from "./pages/NotFound";
+
 import { AppProvider } from "./context/AppContext";
 import CustomCursor from "./components/CustomCursor";
 import CookieConsent from "./components/CookieConsent"; // Cookie Popup Component
@@ -32,6 +33,8 @@ import AboutUs from "./components/AboutUs";
 
 import Waitlist from './components/Waitlist';
 import { useState, useEffect } from 'react';
+import NewUpdates from "./components/Newupdates";
+import PopupModal from "./components/popupmodel";
 
 
 
@@ -47,6 +50,7 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
+          <PopupModal/>
             <CustomCursor />
             <CookieConsent /> {/* Cookie Popup */}
 
@@ -59,6 +63,7 @@ const App = () => {
               <Route path="/livrr-alpha" element={<LivrrAlpha />} />
               <Route path="/blue-zone" element={<BlueZone />} />
               <Route path="/liver-ai" element={<LiverAI />} />
+              <Route path="/new-updates" element={<NewUpdates />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/Article" element={<Articles />} />
