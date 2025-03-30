@@ -1,16 +1,26 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";  // Import for navigation
 import { motion, AnimatePresence } from "framer-motion";
 
 const PopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();  // Navigation hook
 
   // Automatically show the popup on load
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 500); // Delay the popup slightly for a smoother effect
+    }, 500);  // Delay the popup slightly for smoother effect
     return () => clearTimeout(timer);
   }, []);
+
+  // Handle navigation and close popup
+  const handleJoinMovement = () => {
+    setIsOpen(false);        // Close the popup
+    setTimeout(() => {
+      navigate("/livrr-tribe#join-movement");  // Navigate after closing
+    }, 300);  // Slight delay to allow the popup closing animation
+  };
 
   return (
     <AnimatePresence>
@@ -62,7 +72,7 @@ const PopupModal = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               <h2 className="text-4xl font-extrabold text-green-600 mb-4">
-             World Health Day
+                World Health Day
               </h2>
               <p className="text-gray-700 leading-relaxed text-lg">
                 On April 7th, we celebrate health as a state of complete physical, 
@@ -74,9 +84,19 @@ const PopupModal = () => {
                 <strong>Join hands with Livrr</strong>—because a better tomorrow begins with a healthier today! 
               </p>
 
-              {/* CTA Button */}
+              {/* CTA Button to Join the Movement */}
               <motion.button
-                className="mt-8 px-8 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="mt-6 px-8 py-3 bg-green-500 text-white font-bold rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-all duration-300"
+                onClick={handleJoinMovement}   
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                 Join the Movement
+              </motion.button>
+
+              {/* CTA Close Button */}
+              <motion.button
+                className="mt-6 px-8 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
                 onClick={() => setIsOpen(false)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
