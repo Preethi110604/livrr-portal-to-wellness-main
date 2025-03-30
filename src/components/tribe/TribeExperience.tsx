@@ -5,6 +5,7 @@ import {
   Compass, 
   BookOpen, 
   Users, 
+  ShoppingCart,
   Heart, 
   Zap, 
   Leaf 
@@ -14,7 +15,7 @@ const experiences = [
   { icon: <Award className="h-8 w-8" />, title: "Weekly Progress Tracking", description: "Track your health journey with detailed weekly measurements and milestones.", color: "from-green-400 to-green-600" },
   { icon: <Compass className="h-8 w-8" />, title: "Cheat Days Allowed", description: "Our balanced approach includes scheduled cheat days to keep your journey sustainable.", color: "from-blue-400 to-blue-600" },
   { icon: <BookOpen className="h-8 w-8" />, title: "Blue Zone 21 Days Access", description: "Get complete access to our blue zone resources and longevity programs.", color: "from-indigo-400 to-indigo-600" },
-  { icon: <Zap className="h-8 w-8" />, title: "Pure Products Discount", description: "Enjoy special discounts on our curated selection of organic health products.", color: "from-amber-400 to-amber-600" },
+  { icon: <ShoppingCart className="h-8 w-8" />, title: "Pure Products Discount", description: "Enjoy special discounts on our curated selection of organic health products.", color: "from-amber-400 to-amber-600" },
   { icon: <Users className="h-8 w-8" />, title: "Community Meetups", description: "Connect with fellow tribe members through regular gatherings and support sessions.", color: "from-purple-400 to-purple-600" },
   { icon: <Leaf className="h-8 w-8" />, title: "Naturopathy Doctors Consultation", description: "Get expert guidance from naturopathy doctors to improve your health with natural and holistic treatments.", color: "from-green-400 to-green-600" },
   { icon: <Heart className="h-8 w-8" />, title: "Structured Diet Plan", description: "Follow our expert-designed 10-day diet plan to kickstart your health transformation.", color: "from-pink-400 to-pink-600" },
@@ -39,10 +40,10 @@ const TribeExperience = () => {
           <span className="bg-livrr-green/10 text-livrr-green-dark px-4 py-1 rounded-full text-sm font-medium mb-4 inline-block">
             Livrr Tribe Experience
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-livrr-green-dark">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-livrr-green-dark leading-tight tracking-tight">
             What You'll Experience
           </h2>
-          <p className="text-livrr-gray-dark max-w-2xl mx-auto mt-4">
+          <p className="text-livrr-gray-dark max-w-2xl mx-auto mt-2 md:mt-4 leading-relaxed tracking-normal">
             Join our tribe and enjoy these exclusive benefits designed to enhance your health journey 
             and connect you with like-minded individuals.
           </p>
