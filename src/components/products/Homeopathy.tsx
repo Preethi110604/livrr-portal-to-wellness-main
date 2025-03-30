@@ -21,11 +21,7 @@ const homeopathyProducts = [
     description: "Beneficial for arthritis and joint pain.",
     image: "https://media.istockphoto.com/id/950010320/photo/drupes-of-a-staghorn-sumac.jpg?s=612x612&w=0&k=20&c=1djS84217TOct14Mcf463MFF4T4KEi7NCkKJ1Xjf_as="
   },
-  {
-    name: "Sulphur",
-    description: "Treats skin conditions and allergies.",
-    image: "https://media.istockphoto.com/id/1214127619/photo/purified-sulfur-powder-on-a-white-acrylic-background.jpg?s=612x612&w=0&k=20&c=ZYaeA59lJDoxuxS3M6T_U4KkXLBqaeXq_iW1tIZLVyY="
-  }
+ 
 ];
 
 const HomeopathyPage = () => {

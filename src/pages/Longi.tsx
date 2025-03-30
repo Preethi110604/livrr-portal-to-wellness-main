@@ -12,7 +12,7 @@ const Longi = () => {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: "Hello! I'm Livrr AI, your medical assistant focused on longevity and wellness. How can I assist you today?",
+      content: "Hello! I'm Livrr AI, your Restorative assistant focused on longevity and wellness. How can I assist you today?",
       timestamp: new Date()
     }
   ]);
@@ -84,7 +84,7 @@ const Longi = () => {
         <div className="container max-w-4xl">
           <div className="text-center mb-10">
             <h1 className="text-3xl md:text-4xl font-display font-bold text-livrr-green-dark mb-4">
-              Livrr AI - Medical Assistant
+              Livrr AI - Restorative Assistant
             </h1>
             <p className="text-livrr-gray-dark max-w-2xl mx-auto">
               Get personalized medical answers about health, longevity, nutrition, and fitness from our specialized healthcare AI.
@@ -97,7 +97,7 @@ const Longi = () => {
                   <Bot className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-livrr-green-dark">Livrr AI - Medical Assistant</h3>
+                  <h3 className="font-semibold text-livrr-green-dark">Livrr AI - Restorative Assistant</h3>
                   <p className="text-xs text-livrr-gray-dark">Powered by advanced medical knowledge</p>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const Longi = () => {
                   className="flex-1 p-3 rounded-lg border border-gray-200"
                   disabled={isLoading}
                 />
-                <button type="submit" className="bg-livrr-green text-white p-3 rounded-lg hover:opacity-90" disabled={isLoading}>
+                <button type="submit"  aria-label="Send Message" className="bg-livrr-green text-white p-3 rounded-lg hover:opacity-90" disabled={isLoading}>
                   <Send className="h-5 w-5" />
                 </button>
               </form>
