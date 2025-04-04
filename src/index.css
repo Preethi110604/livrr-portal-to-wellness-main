@@ -40,6 +40,7 @@
   }
 }
 
+
 @layer components {
   .glass {
     @apply bg-white/90 backdrop-blur-md border border-white/40 shadow-glass;
@@ -186,4 +187,4 @@ a, button, [role="button"], input, select, textarea, [tabindex="0"] {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-livrr-green;
-}
+}   

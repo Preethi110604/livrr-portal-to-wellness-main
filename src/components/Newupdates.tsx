@@ -20,9 +20,6 @@ const NewUpdates = () => {
           </p>
         </div>
       </main>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
