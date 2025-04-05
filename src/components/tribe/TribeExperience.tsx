@@ -66,20 +66,20 @@ const TribeExperience = () => {
               <div
                 key={experience.title}
                 className="flex flex-col justify-between bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-livrr-green/20 group"
-                style={{ minHeight: '360px', transitionDelay: `${index * 100}ms` }}
+                style={{ minHeight: '240px', transitionDelay: `${index * 100}ms` }}
               >
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${experience.color} flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform`}>
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${experience.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform`}>
                   {experience.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-livrr-green-dark mb-3">
+                <h3 className="text-xl font-semibold text-livrr-green-dark -mt-2">
                   {experience.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-livrr-gray">
+                <p className="text-livrr-gray -mt-2">
                   {experience.description}
                 </p>
               </div>

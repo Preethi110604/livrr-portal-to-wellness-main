@@ -80,7 +80,7 @@ const AboutUs: React.FC = () => {
          
         </div>
       </main>
-      <Footer />
+     
     </div>
   );
 };

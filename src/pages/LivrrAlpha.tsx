@@ -1196,7 +1196,7 @@ const LivrrAlpha = () => {
         </section>
       </main>
       
-      <Footer />
+      
     </div>
   );
 };

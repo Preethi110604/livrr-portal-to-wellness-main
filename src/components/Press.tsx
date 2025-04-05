@@ -86,7 +86,7 @@ const Press: React.FC = () => {
           </motion.div>
         </div>
       </main>
-      <Footer />
+      
     </div>
   );
 };

@@ -11,6 +11,7 @@ import Footer from '@/components/Footer';
 import Loader from '@/components/Loader';
 import CustomCursor from '@/components/CustomCursor';
 import { ArrowUp } from 'lucide-react';
+import Goal from './Goal';
 
 const Index = () => {
   const { loading } = useApp();
@@ -54,6 +55,7 @@ const Index = () => {
           <AnneSection />
           <Features />
           <About />
+          <Goal/>
           <Waitlist />
         </main>
         <Footer />

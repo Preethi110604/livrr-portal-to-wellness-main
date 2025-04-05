@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Facebook } from "lucide-react"; // Removed X logo
+import { Instagram, Facebook } from "lucide-react"; 
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
