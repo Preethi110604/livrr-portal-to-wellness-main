@@ -91,7 +91,9 @@ const App = () => {
             <CustomCursor />
             <CookieConsent />
             <ActivityTracker />
+            <div className="w-full max-w-screen overflow-x-hidden">
 
+ 
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/products" element={<Products />} />
@@ -127,14 +129,16 @@ const App = () => {
                 path="/pages/Goalcard" 
                 element={<GoalCard title="Sample Goal" description="This is a sample goal description" icon={<FaStar/>} onClick={() => console.log("Goal clicked")} />} 
               />
-
             </Routes>
+            </div>
 
             <Footer />
           </BrowserRouter>
         </AppProvider>
       </TooltipProvider>
     </QueryClientProvider>
+    
+    
   );
 };
 
