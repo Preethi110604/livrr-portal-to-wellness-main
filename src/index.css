@@ -33,6 +33,9 @@
   body {
     @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 
   ::selection {
@@ -188,3 +191,18 @@ a, button, [role="button"], input, select, textarea, [tabindex="0"] {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-livrr-green;
 }   
+@layer components {
+  /* Mobile indicator (Swipe Up) */
+  @media (max-width: 767px) {
+    .mobile-indicator {
+      @apply fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center text-gray-500 animate-bounce z-50;
+    }
+  }
+
+  /* Desktop indicator (Scroll Down) */
+  @media (min-width: 768px) {
+    .desktop-indicator {
+      @apply fixed bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-500 animate-pulse z-50;
+    }
+  }
+}

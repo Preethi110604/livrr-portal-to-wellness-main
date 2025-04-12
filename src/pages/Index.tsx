@@ -58,7 +58,7 @@ const Index = () => {
           <Goal/>
           <Waitlist />
         </main>
-        <Footer />
+        
         
         {/* Back to top button - enhanced with animation */}
         <a 
