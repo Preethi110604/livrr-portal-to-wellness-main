@@ -97,7 +97,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <div className="fixed top-10 right-10 bg-livrr-green-dark text-white p-3 rounded-full shadow-lg cursor-pointer hover:bg-livrr-green transition duration-300 hover:scale-110 flex items-center justify-center" onClick={() => navigate('/new-updates')} title="New Updates">
+      <div className="fixed top-15 right-1 bg-livrr-green-dark text-white p-3 rounded-full shadow-lg cursor-pointer hover:bg-livrr-green transition duration-300 hover:scale-110 flex items-center justify-center" onClick={() => navigate('/new-updates')} title="New Updates">
         <MdNotificationsActive className="text-3xl" />
       </div>
     </header>
