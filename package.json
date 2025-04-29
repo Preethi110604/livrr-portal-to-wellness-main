@@ -43,9 +43,14 @@
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.4",
     "@react-spring/web": "^9.7.5",
+<<<<<<< HEAD
     "@react-three/drei": "^9.88.6",
     "@react-three/fiber": "^8.13.5",
     "@studio-freight/lenis": "^1.0.42",
+=======
+    "@react-three/drei": "^10.0.6",
+    "@react-three/fiber": "^9.1.2",
+>>>>>>> 8881b20648e41b2be4d03af32c417dc7939a69b3
     "@supabase/supabase-js": "^2.49.4",
     "@tanstack/react-query": "^5.56.2",
     "class-variance-authority": "^0.7.1",
@@ -81,8 +86,12 @@
     "swiper": "^11.2.6",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
+<<<<<<< HEAD
     "three": "^0.150.1",
     "vanilla-tilt": "^1.8.1",
+=======
+    "three": "^0.175.0",
+>>>>>>> 8881b20648e41b2be4d03af32c417dc7939a69b3
     "vaul": "^0.9.3",
     "zod": "^3.23.8",
     "zustand": "^5.0.3"
